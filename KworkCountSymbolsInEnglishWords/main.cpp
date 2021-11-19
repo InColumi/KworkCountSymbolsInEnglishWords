@@ -64,7 +64,11 @@ int Convert(int number)
 	int result = 0;
 	if(hunred >= 1 && hunred <= 9)
 	{
-		result += 7 + 3; // hundred(7) + and(3)
+		result += 7; // hundred(7) 
+		if(dozens == 0 && unit ==0 )
+		{
+			result += 3; // and(3)
+		}
 		result += GetLengthEnglishWordth(hunred);
 	}
 
